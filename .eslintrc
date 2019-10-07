@@ -11,6 +11,10 @@
     "__DEV__": true
   },
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "no-unused-vars": "warn",
+    "class-methods-use-this": "warn",
+    "prefer-destructuring": "off",
+    "lines-between-class-members": "off"
   }
 }
