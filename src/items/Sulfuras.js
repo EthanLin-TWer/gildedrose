@@ -6,6 +6,9 @@ export class Sulfuras extends Item {
   }
 
   // eslint-disable-next-line class-methods-use-this
+  updateSellIn() {}
+
+  // eslint-disable-next-line class-methods-use-this
   isSulfuras() {
     return true
   }
