@@ -55,16 +55,19 @@ export class Item {
     }
   }
 
+  // eslint-disable-next-line class-methods-use-this
   isSulfuras() {
-    return this.name === 'Sulfuras, Hand of Ragnaros'
+    return false
   }
 
+  // eslint-disable-next-line class-methods-use-this
   isBackstagePass() {
-    return this.name === 'Backstage passes to a TAFKAL80ETC concert'
+    return false
   }
 
+  // eslint-disable-next-line class-methods-use-this
   isAgedBrie() {
-    return this.name === 'Aged Brie'
+    return false
   }
 
   toString() {
