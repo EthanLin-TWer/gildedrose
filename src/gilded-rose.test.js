@@ -8,11 +8,11 @@ describe('GildedRoseTest', () => {
     const items = [new Item('foo', 1, 5)]
 
     const app = new GildedRose(items)
-    app.update_quality()
+    app.updateQuality()
 
     expect(app.items[0].name).toEqual('foo')
     expect(app.items[0].quality).toEqual(4)
-    expect(app.items[0].sell_in).toEqual(0)
+    expect(app.items[0].sellIn).toEqual(0)
   })
 })
 
@@ -44,7 +44,7 @@ it('safety net test', () => {
       result.push(item.toString())
     }
     result.push('')
-    app.update_quality()
+    app.updateQuality()
   }
 
   const expected = fs.readFileSync(`${__dirname}/fixture.txt`, 'utf-8')

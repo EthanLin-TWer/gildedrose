@@ -28,7 +28,7 @@ for (let i = 0; i < days; i++) {
     result.push(item.toString())
   }
   result.push('')
-  app.update_quality()
+  app.updateQuality()
 }
 
 console.log(result.join('\n'))

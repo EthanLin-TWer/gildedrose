@@ -1,15 +1,15 @@
 export class Item {
   name
-  sell_in
+  sellIn
   quality
 
-  constructor(name, sell_in, quality) {
+  constructor(name, sellIn, quality) {
     this.name = name
-    this.sell_in = sell_in
+    this.sellIn = sellIn
     this.quality = quality
   }
 
   toString() {
-    return `${this.name}, ${this.sell_in}, ${this.quality}`
+    return `${this.name}, ${this.sellIn}, ${this.quality}`
   }
 }
