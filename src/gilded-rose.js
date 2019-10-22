@@ -7,7 +7,7 @@ export class GildedRose {
 
   updateQuality() {
     for (const item of this.items) {
-      item.update()
+      item.passOneDay()
     }
   }
 }

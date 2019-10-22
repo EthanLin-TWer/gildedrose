@@ -9,7 +9,7 @@ export class Item {
     this.quality = quality
   }
 
-  update() {
+  passOneDay() {
     this.updateQuality()
     this.updateSellIn()
     if (this.isExpired()) {
