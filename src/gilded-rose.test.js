@@ -33,6 +33,22 @@ describe('GildedRoseTest', () => {
 
     expect(agedBrie.toString()).toEqual('Aged Brie, -1, 32')
   })
+
+  it('the least quality value for normal items are 0 even if the product is expired', () => {
+    const item = new Item('Elixir of the Mongoose', 0, 0)
+
+    item.passOneDay()
+
+    expect(item.toString()).toEqual('Elixir of the Mongoose, -1, 0')
+  })
+
+  it('should quality value decrease double times for normal items', () => {
+    const item = new Item('Elixir of the Mongoose', 0, 3)
+
+    item.passOneDay()
+
+    expect(item.toString()).toEqual('Elixir of the Mongoose, -1, 1')
+  })
 })
 
 it('safety net test', () => {

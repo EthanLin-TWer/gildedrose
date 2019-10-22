@@ -45,9 +45,7 @@ export class Item {
 
   updateQualityAfterExpiration() {
     if (this.quality > 0) {
-      if (!this.isSulfuras()) {
-        this.quality = this.quality - 1
-      }
+      this.quality = this.quality - 1
     }
   }
 
