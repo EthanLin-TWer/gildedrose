@@ -20,6 +20,7 @@ const days = 3
 const result = []
 
 result.push('OMGHAI')
+// eslint-disable-next-line no-plusplus
 for (let i = 0; i < days; i++) {
   result.push(`-------- day ${i} --------`)
   result.push('name, sellIn, quality')
