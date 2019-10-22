@@ -17,6 +17,22 @@ describe('GildedRoseTest', () => {
     expect(app.items[0].quality).toEqual(4)
     expect(app.items[0].sellIn).toEqual(0)
   })
+
+  it('maximum quality is 50 and should not be further added with time passing given aged brie is expired', () => {
+    const agedBrie = new AgedBrie(0, 50)
+
+    agedBrie.passOneDay()
+
+    expect(agedBrie.toString()).toEqual('Aged Brie, -1, 50')
+  })
+
+  it('should add 1 quality when one day passed given aged brie is expired', () => {
+    const agedBrie = new AgedBrie(0, 30)
+
+    agedBrie.passOneDay()
+
+    expect(agedBrie.toString()).toEqual('Aged Brie, -1, 32')
+  })
 })
 
 it('safety net test', () => {
