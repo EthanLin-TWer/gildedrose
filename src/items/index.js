@@ -18,13 +18,7 @@ export class Item {
   }
 
   updateQuality() {
-    if (!this.isAgedBrie() && !this.isBackstagePass()) {
-      if (this.quality > 0) {
-        if (!this.isSulfuras()) {
-          this.quality = this.quality - 1
-        }
-      }
-    } else {
+    if (this.isAgedBrie() || this.isBackstagePass()) {
       if (this.quality < 50) {
         this.quality = this.quality + 1
         if (this.isBackstagePass()) {
@@ -40,6 +34,11 @@ export class Item {
           }
         }
       }
+      return
+    }
+
+    if (this.quality > 0) {
+      this.quality = this.quality - 1
     }
   }
 
