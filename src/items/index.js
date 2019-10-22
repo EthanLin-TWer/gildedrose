@@ -44,14 +44,10 @@ export class Item {
   }
 
   updateQualityAfterExpiration() {
-    if (!this.isBackstagePass()) {
-      if (this.quality > 0) {
-        if (!this.isSulfuras()) {
-          this.quality = this.quality - 1
-        }
+    if (this.quality > 0) {
+      if (!this.isSulfuras()) {
+        this.quality = this.quality - 1
       }
-    } else {
-      this.quality = 0
     }
   }
 
