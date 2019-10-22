@@ -8,7 +8,8 @@ export class Item {
     this.sellIn = sellIn
     this.quality = quality
   }
-  updateItem() {
+
+  update() {
     if (!this.isAgedBrie() && !this.isBackstagePass()) {
       if (this.quality > 0) {
         if (!this.isSulfuras()) {
