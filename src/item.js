@@ -9,6 +9,21 @@ export class Item {
     this.quality = quality
   }
 
+  static createAgedBrie(sellIn, quality) {
+    return new Item('Aged Brie', sellIn, quality)
+  }
+
+  static createSulfuras(sellIn, quality) {
+    return new Item('Sulfuras, Hand of Ragnaros', sellIn, quality)
+  }
+  static createBackstagePass(sellIn, quality) {
+    return new Item(
+      'Backstage passes to a TAFKAL80ETC concert',
+      sellIn,
+      quality
+    )
+  }
+
   updateItem() {
     if (!this.isAgedBrie() && !this.isBackstagePass()) {
       if (this.quality > 0) {
